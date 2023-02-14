@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 1s;
+}
+
+.nav-bar{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.u-image{
+  width: 80px;
+}
+
+.nav-shishu{
+  width: 120px; 
+}
+
+.navbar-right{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.navbar-right a{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: font-weight 0.8s;
+}
+
+.bg
+{
+    opacity:0.2;
+    /* height: 500px; */
+}
+
+.bg img{
+    width: 100%;
+    height: 480px;
+}
+
+.hero-sec-heading{
+    position: relative;
+}
+.op
+{
+    position: absolute;
+    top: -350px;
+    left: 250px;
+    font-size: 40px;
+    letter-spacing: -2.08px;
+    line-height: 50px;
+    color: #424656;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+.card-container {
+  position: relative;
+  height: 100%;
+}
+
+.card-container {
+  grid-gap: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.page-content {
+  position: absolute;
+  display: grid;
+  grid-gap: 5rem;
+  /* grid-gap: 1rem; */
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  height: 330px;
+  top: -230px;
+  /* border-radius: 5px; */
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  border-radius: 10px;
+  height: 330px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 330px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(https://img.freepik.com/premium-vector/cartoon-baby_61878-329.jpg?w=2000);
+}
+.card:nth-child(2):before {
+  background-image: url(https://cdn4.vectorstock.com/i/1000x1000/01/18/pregnant-woman-cartoon-character-in-flat-style-vector-35710118.jpg);
+}
+.card:nth-child(3):before {
+  background-image: url(https://png.pngtree.com/png-clipart/20201028/ourlarge/pngtree-three-cute-cartoon-hand-drawn-red-love-hearts-png-image_2377061.jpg);
+}
+.card:nth-child(4):before {
+  background-image: url(https://dreamsfertility.com/wp-content/uploads/2022/02/egg-donor-img.jpg);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #2a376d;
+  /* color: black; */
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+.id{
+  margin-top: 250px;
+  text-align: center;
+  /* padding-left: 60px; */
+  margin-right: 20px;
+  font-family: brandon-grotesque,Futura,Trebuchet MS,Helvetica-Neue,Helvetica,Arial;
+}
+
+.pranav
+{
+ color:#243570;
+ font-size:2.125rem;
+ padding: 3rem;
+ font-weight: 900;
+
+}
+
+.col-lg-3{
+ /* text-align: center; */
+ display: flex;
+ /* justify-content: space-evenly; */
+ margin: 0 auto;
+ color: #243570;
+}
+
+.container-id{
+ padding-left: 5rem;
+}
+
+.text{
+ font-size: 35px;
+ font-weight: bold;
+}
+
+.sub-text{
+  padding-top: 10px;
+  width: 300px;
+  color: #686b78;
+  line-height: 30px;
+}
+
+.edu-section{
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.edu-sec-left{
+  padding-right: 100px;
+  margin-bottom: 25px;
+  font-size: 54px;
+  line-height: 55px;
+  color: #243570;
+  margin-left: 50px;
+  font-family: brandon-grotesque,Futura,Trebuchet MS,Helvetica-Neue,Helvetica,Arial;
+}
+
+.edu-sec-right{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-right: 50px;
+  color: #686b78;
+  font-family: brandon-grotesque,Futura,Trebuchet MS,Helvetica-Neue,Helvetica,Arial;
+  gap: 60px;
+}
+
+.sec-content{
+  margin-right: 50px;
+  line-height: 27px;
+}
+
+.video{
+  width: 80%;
+  margin-right: 50px;
+}
+
+.reg {
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 100px;
+}
+
+/* *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+.container1
+{
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img-container1
+{
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    transform:translate(75px,75px);
+    object-fit:cover;
+    border: 5px solid black;
+    filter: drop-shadow(0 0 10rem rgb(52, 115, 204));
+    
+}
+
+.img-container1 img{
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+}
+
+.h h3 
+{
+    transform: translateX(275px);
+    margin-right: 30rem;
+    font-size:30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.para{
+    width: 400px;
+    transform: translateX(300px);
+    line-height: 1.5;
+    font-size: large;
+    text-align: center;
+}
+
+footer{
+  position:relative;
+  margin-top:150px;
+  background-color: #343d68;
+  padding:3rem;
+}
+
+.footer-wrapper{
+  display:flex;
+  gap:1rem;
+  padding:1.2rem;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.link-wrapper{
+    transform: translateX(400px);
+  display:flex;
+  gap:1.2rem;
+}
+
+.link-wrapper a{
+  color:white;
+  text-decoration:none;
+  transition:all 0.6s;
+}
+
+.link-wrapper div a:hover{
+  color:var(--bgOrange);
+}
+
+.icon-wrapper{
+  height: 50px;
+  width: 200px;
+  display:flex;
+  gap:1rem;
+  color: white;
+} 
+
+.blogs{
+  text-align: center;
+  color: #2c3d83;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.fa-brands{
+  height: 5px;
+  width: 5px;
+}
+
+.fa-linkedin{
+  height: 5px;
+  width: 5px;
+}
+
+/* .underline{
+  height: 20px;
+  width: 200px;
+  text-align: center;
+  color: black;
+} */

@@ -1,0 +1,17 @@
+.container {
+    padding-top: 4rem ;
+    padding-left:15rem;
+    
+}
+
+.col-lg-6 img{
+    /* height: 300x; */
+    width: 350px;
+    height: 300px;
+}
+
+.card-body {
+    transform: translateX(-100px);
+    box-shadow: 10px 0px 10px;
+}
+
